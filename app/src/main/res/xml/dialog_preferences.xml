@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Dialoge">
+
+        <EditTextPreference
+            android:defaultValue="Hallo Welt"
+            android:key="et_info"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Info"
+            app:summary="eine Information" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/entries"
+            android:entryValues="@array/values"
+            android:key="liste_1"
+            android:title="Werte"
+            app:summary="eine kleine Auswahl" />
+        <MultiSelectListPreference
+            android:defaultValue="@array/default_values"
+            android:entries="@array/entries"
+            android:entryValues="@array/values"
+            android:key="multi_list_1"
+            android:title="Kombinationen"
+            app:summary="mehrere wählen" />
+    </PreferenceCategory>
+</PreferenceScreen>
