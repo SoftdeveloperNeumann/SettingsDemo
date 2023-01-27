@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Advanced Preferences"
+        app:initialExpandedChildrenCount="1">
+
+        <Preference
+            app:summary="zeige nicht alle Einträge"
+            app:title="Erweiterbare Gruppe" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="parent"
+            android:title="Parent" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="child"
+            android:title="Child"
+            app:dependency="parent" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:title="Variable Beschreibung"
+            app:summaryOff="Aus"
+            app:summaryOn="Ein" />
+        <Preference
+            app:enableCopying="true"
+            app:key="copy"
+            app:summary="Text zum Kopieren"
+            app:title="Kopierbar" />
+
+        <Preference
+            app:summary="mit einem Intent"
+            app:title="Website aufrufen">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com" />
+
+        </Preference>
+
+    </PreferenceCategory>
+</PreferenceScreen>
