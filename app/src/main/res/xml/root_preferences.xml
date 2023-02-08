@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:key="root">
 
     <Preference
         android:id="@+id/pref_dialog"
@@ -8,6 +9,7 @@
         android:layout_height="wrap_content"
         app:fragment="com.example.settingsdemo.settings.DialogFragment"
         app:icon="@android:drawable/btn_plus"
+        app:key="Dialog Prefs"
         app:summary="Dialog Prefs"
         app:title="DialogPrefs" />
     <Preference
@@ -27,7 +29,7 @@
         app:title="Advanced Prefs" />
     <EditTextPreference
         android:defaultValue="empty"
-        android:key="user_name"
+        android:key="username"
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="Username"
